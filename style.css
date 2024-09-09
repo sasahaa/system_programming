@@ -1,0 +1,23 @@
+body{
+	background-color: #F5F5DC;
+}
+
+h1{
+	color: #5F9EA0;
+	font-family: 'Gowun Dodum', sans-serif;
+	border-radius: 30px;
+	text-align: center;
+}
+
+h2{
+	color: #8FBC8F;
+	font-family: 'Gowun Dodum', sans-serif;
+	border-radius: 25px;
+	text-align: center;
+}
+
+#img{
+	height: 400px;
+	margin: auto;
+	display: block;
+}
