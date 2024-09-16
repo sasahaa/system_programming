@@ -1,23 +1,176 @@
 body{
-	background-color: #F5F5DC;
+	background-color: white;
+}
+
+a{
+	text-decoration: none;
+	color: #556B2F;
+	display: inline-block;
+	padding-right: 30px;
+	margin-left: 40px;
+	font-size: 27px;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
 }
 
 h1{
-	color: #5F9EA0;
-	font-family: 'Gowun Dodum', sans-serif;
-	border-radius: 30px;
+	color: white;
+	font-family: 'GBrygada 1918', serif;
+	font-size: 40px;
 	text-align: center;
+	background-color: #556B2F;
+	width: 100%;
+	border-radius: 10px;
+	min-height: 50px;
+}
+
+.title1.fixed{
+	width: -webkit-fill-available;
+	max-width: 1220px;
+	z-index: 1000;
+	background: white;
+	position: fixed;
+	top: 0;
+}
+
+.header__top{
+	padding: 40px auto;
+	display: flex;
+	justify-content: space-between;
+	max-width: 1220px;
 }
 
 h2{
-	color: #8FBC8F;
-	font-family: 'Gowun Dodum', sans-serif;
-	border-radius: 25px;
-	text-align: center;
+	color: white;
+	font-family: 'GBrygada 1918', serif;
+	text-align: left;
+	font-weight: bold;
+	font-size: 30px;
+	margin-left: 40px;
+	background-color: #556B2F;
+	border-radius: 10px;
+	min-height: 40px;
+	max-width: 700px;
 }
 
 #img{
 	height: 400px;
 	margin: auto;
 	display: block;
+}
+
+p{
+	color: #556B2F;
+	margin-left: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: justify;
+}
+
+.information_about_Git{
+	max-width: 750px;
+	margin-top: 120px;
+}
+
+.about_Git{
+	position: absolute;
+	right: 160px; 
+	width: 750px;
+}
+
+.benefits{
+	margin-top: 520px;
+	text-align: justify;
+	max-width: 1220px;
+}
+
+h3{
+	color: #556B2F;
+	margin-left: 40px;
+	font-size: 25px;
+	line-height: 10px;
+}
+.title_benefits{
+	text-align: center;
+}
+.benefits1{
+	font-size: 20px;
+	text-align: left;
+	float: left;
+	margin: 10px 10px 10px 0px;
+	max-width: 570px;
+}
+.benefits2{
+	font-size: 20px;
+	text-align: left;
+	float: left;
+	margin: 10px 10px 10px 0px;
+	max-width: 570px;
+}
+
+.basic_commands{
+	margin-top: 720px;
+	text-align: justify;
+	max-width: 1220px;
+}
+
+.code_container {
+	position: relative;
+	max-width: 750px;
+	margin-left: 40px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+
+pre {
+	margin: 0;
+	padding: 10px;
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	overflow-x: auto;
+}
+
+button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 5px 10px;
+	font-size: 14px;
+	border: none;
+	border-radius: 3px;
+	background-color: #556B2F;
+	color: white;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: white;
+	color: #556B2F;
+}
+
+.certificate{
+	margin-top: 160px;
+	text-align: justify;
+	max-width: 1220px;
+}
+
+.img_sertificate{
+	max-height: 500px;
+	max-width: 400px;
+	margin-left: 40px;
+}
+
+.sources_of_information{
+	margin-top: 160px;
+}
+.sources{
+	line-height: 60px;
+	font-size: 30px;
 }
