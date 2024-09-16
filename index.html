@@ -2,13 +2,129 @@
 <html>
 <head>
 	<title>sp</title>
-			<link rel="stylesheet" type="text/css" href="style.css">
-			<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+<!-- 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css"> -->
 </head>
 <body>
-	<h1>Системне програмування</h1>
-	<h2>GitHub Pages!</h2>
-	<img src="img.jpg" id="img">
+	<div class="container">
+		<h1 class="title1">Системне програмування</h1>
+		<div class="header__top" id="header__top">
+			<nav class="nav">
+				<!-- Виправлено атрибути href для посилань -->
+				<a href="#information" class="nav__link" data-scroll="#information">Інформація</a>
+				<a href="#benefits" class="nav__link" data-scroll="#benefits">Переваги</a>
+				<a href="#basic_commands" class="nav__link" data-scroll="#basic_commands">Базові команди</a>
+				<a href="#certificate" class="nav__link" data-scroll="#certificate">Сертифікати</a>
+				<a href="#sources_of_information" class="nav__link" data-scroll="#sources_of_information">Джерела інформації</a>
+			</nav>
+		</div>
 
+		<div class="information_about_Git" id="information">
+			<h2 >Інформація про системи контролю версій та Git</h2>
+				<p>Система керування версіями - це система, що записує зміни у файл або набір файлів протягом деякого часу таким 
+					чином, що можна повернутися до певної версії пізніше. Це може бути як програмний код так і будь-які інші файли.
+					Існують три основні типи систем керування версіями: локальні, з централізованим сховищем та розподіленим (деценралізованим).
+				</p>
+				<p class="about_Git">Git – це система контролю версій, яка дозволяє відстежувати зміни у коді та співпрацювати з іншими розробниками.
+					Вона була створена Лінусом Торвальдсом у 2005 році для управління розробкою ядра Linux. Git відрізняється від інших систем контролю версій
+					 тим, що кожен розробник має локальну копію всього репозиторію, а не лише останньої версії коду. Це дозволяє працювати незалежно та робити 
+					 зміни без доступу до центрального сервера. Git також надає потужні інструменти для роботи з гілками, що дозволяє розробляти декілька функцій
+					  одночасно та об'єднувати їх в один код.   
+				</p>
+	</div>
+
+	<div class="benefits" id="benefits">
+		<h2>Основні можливості та переваги використання Git</h2>
+		<div class="benefits1">
+			<h3 class="title_benefits">ОСНОВНІ МОЖЛИВОСТІ</h3>
+			<p>КОНТРОЛЬ – дозволяє спостерігати за змінами в коді та здійснювати виправлення без стресу.</p>
+			<p>СПІВПРАЦЯ – можна працювати в команді над великими проєктами без конфліктів.</p>
+			<p>БЕЗПЕКА – дає можливість відновлювати видалені файли та повертати зміни за допомогою історії комітів.</p>
+			<p>ГНУЧКІСТЬ – можна створювати гілки для різних функцій та експериментувати без ризику для основного коду.</p>
+		</div>
+		<div class="benefits2">
+			<h3 class="title_benefits">ПЕРЕВАГИ</h3>
+			<p>ШВИДКІСТЬ – Git оптимізований для швидкої роботи з репозиторіями.</p>
+			<p>ПРОСТОТА ВИКОРИСТАННЯ – має інтуїтивно зрозумілий інтерфейс командного рядка.</p>
+			<p>ПІДТРИМКА НЕЛІНІЙНОЇ РОЗРОБКИ – Git підтримує створення і злиття гілок, що дозволяє розробникам працювати над різними функціями або виправленнями паралельно, без переривання основної лінії розробки.</p>
+			<p>ЕФЕКТИВНА РОБОТА З ВЕЛИКИМИ ПРОЕКТАМИ</p>
+		</div>
+	</div>
+
+	 <div class="basic_commands" id="basic_commands">
+			<h2>Базові команди роботи в системі Git</h2>
+	</div>
+
+	<div class="code_container">
+		<pre id="codeBlock"><code>git init 			ініціалізує новий Git репозиторій в поточній директорії
+
+git status 			виводить стан робочого дерева та індексу
+
+git log 			виводить історію комітів
+
+git branch 			виводить список гілок у репозиторії
+
+git add < file > 		додає вказаний файл до індексу
+
+git switch < branch > 		перемикається на іншу існуючу гілку
+
+git merge < branch > 		зливає зміни з вказаної гілки в поточну гілку
+
+git checkout 			переключається на вказаний коміт
+
+git reset 			скасовує всі зміни до вказаного коміта
+
+git show 			показує зміни між комітом і поточним станом файлу
+
+			</code></pre>
+		<button id="copyButton">Копіювати</button>
+	</div>
+
+	<div class="certificate" id="certificate">
+		<h2>Сертифікати</h2>
+			<img class="img_sertificate" src="fundamenta-git-certificate.jpg">
+	</div>
+
+
+	<div class="sources_of_information" id="sources_of_information">
+		<h2>Джерела інформації</h2>
+		<div class="sources">
+			<a href=" https://pupenasan.github.io/ProgIngContrSystems/%D0%9B%D0%B5%D0%BA%D1%86/7_git.html" target="_blank">https://pupenasan.github.io/ProgIngContrSystems/%D0%9B%D0%B5%D0%BA%D1%86/7_git.html</a>
+			<a href="https://foxminded.ua/shho-take-github-i-navishho-vin-potriben-rozrobniku/" target="_blank">https://foxminded.ua/shho-take-github-i-navishho-vin-potriben-rozrobniku/</a>
+			<a href="https://itproger.com/ua/news/kratkaya-instruktsiya-po-git-osnovnie-ponyatiya-i-komandi" target="_blank">https://itproger.com/ua/news/kratkaya-instruktsiya-po-git-osnovnie-ponyatiya-i-komandi</a>
+			<a href="https://dan-it.com.ua/uk/blog/instrukcija-git-dlja-novachkiv-shho-ce-take-jak-vin-pracjuie-ta-jaki-ie-osnovni-komandi/" target="_blank">https://dan-it.com.ua/uk/blog/instrukcija-git-dlja-novachkiv-shho-ce-take-jak-vin-pracjuie-ta-jaki-ie-osnovni-komandi/</a>
+			<a href="https://fundamenta.app/" target="_blank">https://fundamenta.app/</a>
+		</div>
+	</div>
+</div>
+
+	<script>
+	// JavaScript для плавної прокрутки до елементів
+		document.querySelectorAll('a[data-scroll]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				const targetId = this.getAttribute('href');
+				const targetElement = document.querySelector(targetId);
+				targetElement.scrollIntoView({ behavior: 'smooth' });
+			});
+		});
+
+		document.getElementById('copyButton').addEventListener('click', function() {
+			var code = document.getElementById('codeBlock').innerText;
+
+			var tempTextarea = document.createElement('textarea');
+				tempTextarea.value = code;
+				document.body.appendChild(tempTextarea);
+
+				tempTextarea.select();
+				document.execCommand('copy');
+
+				document.body.removeChild(tempTextarea);
+
+				alert('Код скопійовано в буфер обміну!');
+			});
+	</script>
 </body>
 </html>
