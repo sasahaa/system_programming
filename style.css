@@ -10,6 +10,9 @@ a{
 	margin-left: 40px;
 	font-size: 27px;
 }
+.link__main{
+	font-size: 50px;
+}
 
 .container{
 	max-width: 1200px;
@@ -35,6 +38,17 @@ h1{
 	background: white;
 	position: fixed;
 	top: 0;
+}
+
+.header__top1{
+	text-align: center;
+}
+
+.main_img{
+	margin: auto;
+	display: block;
+	height: 450px;
+	margin-top: 60px;
 }
 
 .header__top{
@@ -76,6 +90,11 @@ p{
 	margin-top: 120px;
 }
 
+.information_about_Linux{
+	max-width: 750px;
+	margin-top: 120px;
+}
+
 .about_Git{
 	position: absolute;
 	right: 160px; 
@@ -86,6 +105,10 @@ p{
 	margin-top: 520px;
 	text-align: justify;
 	max-width: 1220px;
+}
+
+#distributions{
+margin-top: 390px;
 }
 
 h3{
@@ -116,6 +139,14 @@ h3{
 	margin-top: 720px;
 	text-align: justify;
 	max-width: 1220px;
+}
+
+#script{
+	margin-top: 600px;
+}
+
+#commands{
+	margin-top: 600px;
 }
 
 .code_container {
@@ -155,17 +186,7 @@ button:hover {
 	color: #556B2F;
 }
 
-.certificate{
-	margin-top: 160px;
-	text-align: justify;
-	max-width: 1220px;
-}
 
-.img_sertificate{
-	max-height: 500px;
-	max-width: 400px;
-	margin-left: 40px;
-}
 
 .sources_of_information{
 	margin-top: 160px;
