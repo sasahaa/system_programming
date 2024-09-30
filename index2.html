@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sp</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+<!-- 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css"> -->
+</head>
+<body>
+	<div class="container">
+		<h1 class="title1">Системне програмування</h1>
+		<div class="header__top" id="header__top">
+			<nav class="nav">
+				<!-- Виправлено атрибути href для посилань -->
+				<a href="#information" class="nav__link" data-scroll="#information">Інформація</a>
+				<a href="#distributions" class="nav__link" data-scroll="#distributions">Дистрибутиви</a>
+				<a href="#commands" class="nav__link" data-scroll="#commands">Команди</a>
+				<a href="#script" class="nav__link" data-scroll="#script">Скрипти</a>
+				<a href="#sources_of_information" class="nav__link" data-scroll="#sources_of_information">Джерела інформації</a>
+			</nav>
+		</div>
+
+		<div class="information_about_Linux" id="information">
+			<h2 >Що таке Linux?</h2>
+				<p>Linux — це сімейство Unix-подібних операційних систем, які використовують ядро ​​Linux розробки фінно-американського програміста Лінуса
+					Торвальдса. ОС, що використовують ядро ​​Linux, називаються дистрибутивами Linux, і є такими ж операційними системами як Microsoft Windows
+					або Apple macOS, але з однією дуже важливою особливістю — їх вихідні коди є відкритими, оскільки вони поширюються під ліцензією GNU GPL,
+					яка передбачає створення вільного та відкритого програмного забезпечення (open source software). Це означає, що будь-який користувач має
+					право вивчати та змінювати вихідний код.
+				</p>
+				<p class="about_Git">Ядро Linux хоч і відноситься до монолітних ядер, але воно також запозичує і деякі ідеї з мікроядерної архітектури, 
+					що означає, що вся операційна система працює в просторі ядра, а драйвера пристроїв (у вигляді модулів) можуть бути легко завантажені 
+					(або вивантажені) прямо під час роботи операційної системи. 
+				</p>
+	</div>
+
+	<div class="benefits" id="distributions">
+		<h2>Дистрибутиви</h2>
+		<div class="benefits1">
+			<p>Arch Linux – він кращий для досвідченіших користувачів, які віддають перевагу максимальній гнучкості та контролю над своєю системою.</p>
+			<p>CentOS – це безкоштовний та відкритий комплект, що базується на вихідному коді комерційного продукту RHEL.</p>
+			<p>Debian – це стабільний та універсальний дистрибутив, відомий своєю надійністю.</p>
+		</div>
+		<div class="benefits2">
+			<p>Ubuntu – це користувальницький дружній варіант, який служить як вхідна точка для багатьох новачків у світ відкритої ОС. </p>
+			<p>Linux Mint – легкий у використанні набір, створений з акцентом на зручності для користувачів, що переходять з інших ОС. </p>
+			<p>Manjaro – це дружній комплект, який побудований на Arch Linux.</p>
+		</div>
+	</div>
+
+	<div class="basic_commands" id="commands">
+			<h2>Команди роботи в Linux CLI </h2>
+			<div class="benefits1">
+				<p>cd – змінити поточну робочу директорію</p>
+				<p>mkdir – створити нову директорію</p>
+				<p>head – допомагають виконувати пошук, виводить рядки з початку документа</p>
+				<p>tail – допомагають виконувати пошук, виводить рядки з кінця документа</p>
+				<p>touch – дозволяє змінювати різні часові мітки файлу</p>
+			</div>
+			<div class="benefits2">
+				<p>man  – можна  отримати довідку і документацію про використання команди</p>
+				<p>cat – виводить вміст файлу, створює і об'єднує файли' </p>
+				<p>pwd  – виводить робочу директорію</p>
+				<p>rm – видалити файл або директорію</p>
+				<p>ls – вивести вміст поточного каталогу</p>
+				<p>cp – копіювання файлів</p>
+			</div>
+	</div>
+
+	 <div class="basic_commands" id="script">
+			<h2>BASH - скрипт</h2>
+	</div>
+
+	<div class="code_container">
+		<pre id="codeBlock"><code>#!/bin/bash
+
+user_file="users.txt"
+
+registration() {
+    echo "Введіть логін:"
+    read name
+    echo "Введіть пароль:"
+    read password
+
+
+    if grep -q "^$name:" "$user_file"; then
+        echo "Користувач вже існує. Спробуйте інший логін."
+    else
+        echo "$name:$password" >> "$user_file"
+        echo "Реєстрація успішна! Користувача $name додано."
+    fi
+}
+
+login() {
+    echo "Введіть логін"
+    read name
+    echo "Введіть пароль:"
+    read password
+    echo  
+
+    if grep -q "^$name:$password$" "$user_file"; then
+        echo "Вхід успішний! Ласкаво просимо, $name."
+    else
+        echo "Неправильно введені дані. Спробуйте ще раз."
+    fi
+}
+
+
+echo "Виберіть опцію:"
+echo "1. Реєстрація"
+echo "2. Авторизація"
+read -p "Ваш вибір: " choice
+
+case $choice in
+    1)
+        registration
+        ;;
+    2)
+        login
+        ;;
+    *)
+        echo "Неправильний вибір. Завершення програми."
+        ;;
+esac
+
+			</code></pre>
+		<button id="copyButton">Копіювати</button>
+	</div>
+
+
+	<div class="sources_of_information" id="sources_of_information">
+		<h2>Джерела інформації</h2>
+		<div class="sources">
+			<a href=" https://itproger.com/ua/news/top-7-linux-distributivov-v-2023-godu" target="_blank">https://itproger.com/ua/news/top-7-linux-distributivov-v-2023-godu</a>
+			<a href="https://acode.com.ua/what-is-linux/" target="_blank">https://acode.com.ua/what-is-linux/</a>
+			<a href="https://hyperhost.ua/info/uk/komandi-po-upravlinnyu-os-pwd-cd-mkdir-touch-cp-ls-rm-less-more-find-head-tail-cat-grep-scp-i-in" target="_blank">https://hyperhost.ua/info/uk/komandi-po-upravlinnyu-os-pwd-cd-mkdir-touch-cp-ls-rm-less-more-find-head-tail-cat-grep-scp-i-in</a>
+			<a href="https://freehost.com.ua/ukr/faq/articles/vneshnie-komandi-bash-dlja-raboti-s-virazhenijami-i-vipolnenija-slozhnih-vichislenij/" target="_blank">https://freehost.com.ua/ukr/faq/articles/vneshnie-komandi-bash-dlja-raboti-s-virazhenijami-i-vipolnenija-slozhnih-vichislenij/</a>
+		</div>
+	</div>
+</div>
+
+	<script>
+	// JavaScript для плавної прокрутки до елементів
+		document.querySelectorAll('a[data-scroll]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				const targetId = this.getAttribute('href');
+				const targetElement = document.querySelector(targetId);
+				targetElement.scrollIntoView({ behavior: 'smooth' });
+			});
+		});
+
+		document.getElementById('copyButton').addEventListener('click', function() {
+			var code = document.getElementById('codeBlock').innerText;
+
+			var tempTextarea = document.createElement('textarea');
+				tempTextarea.value = code;
+				document.body.appendChild(tempTextarea);
+
+				tempTextarea.select();
+				document.execCommand('copy');
+
+				document.body.removeChild(tempTextarea);
+
+				alert('Код скопійовано в буфер обміну!');
+			});
+	</script>
+</body>
+</html>
